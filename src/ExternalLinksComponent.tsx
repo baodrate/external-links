@@ -43,7 +43,7 @@ export const ExternalLinksComponent = (props: ExternalLinksViewProps) => {
 	}, [activeFile, filePathToLinks, urlToFiles]);
 
 	return (
-		<div>
+		<div className="external-links-pane">
 			<div className="tree-item-self external-links-header">
 				<div className="tree-item-inner">External links</div>
 				<div className="tree-item-flair-outer">
@@ -91,8 +91,8 @@ export const ExternalLinksComponent = (props: ExternalLinksViewProps) => {
 			return (
 				// Make it gray on collapsed, white when open
 				<TreeView
-					defaultCollapseIcon={<ChevronRight />}
-					defaultExpandIcon={<ChevronDown />}
+					defaultCollapseIcon={<ChevronDown />}
+					defaultExpandIcon={<ChevronRight />}
 				>
 					<TreeItem
 						key={nodeId}
